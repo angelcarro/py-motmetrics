@@ -26,10 +26,10 @@ jobs:
             - name: Install dependencies
               run: |
                   pip install --upgrade pip
+                  pip install lap
                   pip install flake8 pytest pytest-benchmark        
                   if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
                   pip install scipy "ortools<9.4" lapsolver munkres
-                  pip install lap
             - name: Lint with flake8
               run: |
                   # stop the build if there are Python syntax errors or undefined names
